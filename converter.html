@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>支持多币种的汇率换算器</title>
+    <link rel="stylesheet" type="text/css" href="converter.css">
+</head>
+
+<body>
+    <div id="languagebar">
+        <span id="par">语言</span>
+        <ul id="languageselect">
+            <li class="languages" id="zh-CN" onclick="languagechange(id)">中文</li>
+            <li class="languages" id="en" onclick="languagechange(id)">English</li>
+            <li class="languages" id="ja" onclick="languagechange(id)">日本語</li>
+        </ul>
+    </div>
+    <div id="sidebar">
+        <ul>
+            <li class="flag">
+                <img id="CNY" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/cn.svg" ondragstart="drag(event)" alt="CNY">
+            </li>
+            <li class="flag ">
+                <img id="JPY" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/jp.svg" ondragstart="drag(event)" alt="JPY">
+            </li>
+            <li class="flag">
+                <img id="USD" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" ondragstart="drag(event)" alt="USD">
+            </li>
+            <li class="flag">
+                <img id="EUR" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/eu.svg" ondragstart="drag(event)" alt="EUR">
+            </li>
+            <li class="flag">
+                <img id="GBP" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/gb.svg" ondragstart="drag(event)" alt="GBP">
+            </li>
+            <li class="flag">
+                <img id="HKD" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/hk.svg" ondragstart="drag(event)" alt="HKD">
+            </li>
+            <li class="flag">
+                <img id="TWD" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/tw.svg" ondragstart="drag(event)" alt="TWD">
+            </li>
+            <li class="flag">
+                <img id="KRW" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/kr.svg" ondragstart="drag(event)" alt="KRW">
+            </li>
+            <li class="flag">
+                <img id="AUD" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/au.svg" ondragstart="drag(event)" alt="AUD">
+            </li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <div id="titles">
+            <h1 id="maintitle">支持多币种的汇率换算器</h1>
+            <p id="maintitleex">拖动相应的旗标到对应的方框里，最多可同时比较5种货币</p>
+        </div>
+        <div id="currencybox">
+            <form id="baselinebox" ondrop="dropbaseline(event)" ondragover="allowDrop(event)">
+                <fieldset id="baselinefield">
+                    <legend id="legend1">基准货币</legend>
+                </fieldset>
+            </form>
+            <form id="comparebox" ondrop="dropcompare(event)" ondragover="allowDrop(event)">
+                <fieldset id="comparefield">
+                    <legend id="legend2">比较货币</legend>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<script type="text/javascript" src="converter.js"></script>
+
+</html>
